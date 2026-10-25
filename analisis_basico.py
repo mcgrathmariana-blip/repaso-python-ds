@@ -1,4 +1,5 @@
 # TAREA 1: Definición de variables
+# Definimos los datos del producto utilizando distintos tipos de datos.
 
 producto = "Auriculares"
 precio_producto = 85.50
@@ -15,6 +16,7 @@ print(
 
 
 # TAREA 2: Bucle y condicional
+# Recorremos los precios y los clasificamos según si superan 100.
 
 precios = [45, 120, 89.90, 150, 100]
 
