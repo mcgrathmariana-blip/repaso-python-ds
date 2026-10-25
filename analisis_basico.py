@@ -1,28 +1,59 @@
-# Repaso de Python para Ciencia de Datos
+# TAREA 1: Definición de variables
 
-## Descripción
+producto = "Auriculares"
+precio_producto = 85.50
+stock_producto = 20
+tiene_descuento = True
 
-Este repositorio contiene una práctica de Python básico orientada a consolidar conocimientos fundamentales para el análisis de datos y el aprendizaje de librerías como Pandas y Scikit-Learn.
+print("TAREA 1: Información del producto")
+print(
+    f"Producto: {producto} | "
+    f"Precio: ${precio_producto:.2f} | "
+    f"Stock: {stock_producto} unidades | "
+    f"Descuento disponible: {tiene_descuento}"
+)
 
-## Contenidos
 
-- **Variables y tipos de datos:** strings, floats, integers y booleanos.
-- **Bucles y condicionales:** clasificación de precios mediante `for` e `if/else`.
-- **Diccionarios:** almacenamiento, modificación y consulta de datos de productos.
-- **Funciones:** cálculo de suma total, promedio y cantidad de elementos de una lista.
+# TAREA 2: Bucle y condicional
 
-## Archivo principal
+precios = [45, 120, 89.90, 150, 100]
 
-- `analisis_basico.py`: contiene las soluciones de las cuatro tareas del ejercicio.
+print("\nTAREA 2: Clasificación de precios")
 
-## Cómo ejecutar
+for precio in precios:
+    if precio > 100:
+        print(f"${precio:.2f}: Caro")
+    else:
+        print(f"${precio:.2f}: Económico")
 
-Se necesita tener Python 3 instalado. Desde una terminal, ejecutar:
 
-```bash
-python analisis_basico.py
-```
+# TAREA 3: Diccionario de almacén
 
-## Objetivo
+almacen = {
+    "Auriculares": 20,
+    "Teclado": 15,
+    "Mouse": 30
+}
 
-Practicar la manipulación de datos básicos en Python y desarrollar una base sólida para futuros proyectos de Ciencia de Datos.
+# Agregamos un producto nuevo
+almacen["Monitor"] = 10
+
+# Consultamos el stock de un producto
+print("\nTAREA 3: Stock del almacén")
+print(f"Stock de Teclado: {almacen['Teclado']} unidades")
+
+
+# TAREA 4: Función de resumen estadístico
+
+def resumen_estadistico(numeros):
+    return {
+        "suma_total": sum(numeros),
+        "promedio": sum(numeros) / len(numeros),
+        "cantidad_elementos": len(numeros)
+    }
+
+
+# Probamos la función con una lista de ejemplo
+print("\nTAREA 4: Resumen estadístico")
+resultado = resumen_estadistico([10, 20, 30])
+print(resultado)
